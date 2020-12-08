@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --mary-jane-pink: rgb(243, 67, 164);
+  --stapleton-orange: #f09001;
+  --uchis-green: #0e850a;
+  --rick-james-blue: #110ecf;
+}
+
+.bg-mary-jane:hover {
+  background: var(--mary-jane-pink);
+}
+.bg-stapleton:hover {
+  background: var(--stapleton-orange);
+}
+.bg-uchis:hover {
+  background: var(--uchis-green);
+}
+.bg-rick-james:hover {
+  background: var(--rick-james-blue);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+}
+
+.name {
+  transform: translate3d(0, 0, 50px);
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+}
+
+.card:hover .name {
+  top: 1rem;
+  opacity: 1;
+}
+
+.buy {
+  left: 50%;
+  transform: translate3d(-50%, 0, 50px);
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+}
+
+.card:hover .buy {
+  bottom: 1rem;
+  opacity: 1;
+}
+
+img {
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+}
+
+.card:hover img {
+  transform: translate3d(0, 0, 50px);
+  transform-style: preserve-3d;
+}
+
+.image::before {
+  content: "";
+  border-radius: .25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: .25rem;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.card:hover .image::before {
+  opacity: .2;
+}
+
+.image-1::before {
+  background: center / cover url("https://cdn-s3.allmusic.com/release-covers/500/0001/183/0001183504.jpg");
+}
+.image-2::before {
+  background: center / cover url("https://i.ytimg.com/vi/4zAThXFOy2c/hqdefault.jpg");
+}
+.image-3::before {
+  background: center / cover url("https://uproxx.com/wp-content/uploads/2018/01/kali-uchis-after-the-storm-ft-tyler-the-creator-bootsy-collins-screenshot.jpg?w=650");
+}
+.image-4::before {
+  background: center / cover url("https://images.genius.com/844a6d8f64cbc520d7d58ddacd60868d.1000x1000x1.jpg");
+}
